@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../img/logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -13,15 +14,15 @@ function Navbar() {
 
       {/* Navigation links in center */}
       <div className="navbar-links">
-        <a href="/" className="nav-link">
+        <Link to="/" className="nav-link">
           Home
-        </a>
+        </Link>
         <a href="#investors" className="nav-link">
           For Investors
         </a>
-        <a href="/farmers" className="nav-link">
+        <Link to="/farmers" className="nav-link">
           For Farmers
-        </a>
+        </Link>
       </div>
 
       {/* Login button on the right */}
