@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Farmers from "./pages/Farmers";
+import Investors from "./pages/Investors";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/farmers" element={<Farmers />} />
+          <Route path="/investors" element={<Investors />} />
           <Route
             path="/"
             element={

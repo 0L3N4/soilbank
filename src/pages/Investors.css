@@ -1,0 +1,453 @@
+/* Investors Dashboard Container */
+.investors-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin-top: 60px;
+  font-family: "Lato", sans-serif;
+}
+
+/* Hero Section */
+.investors-hero {
+  background: linear-gradient(135deg, #145a32 0%, #0d3d24 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #f5f2e8;
+}
+
+.investors-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.investors-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-family: "Playfair Display", serif;
+  color: #f5f2e8;
+}
+
+.investors-hero-description {
+  font-size: 1.2rem;
+  color: #f5f2e8;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Search and Filter Section */
+.investors-search-section {
+  background-color: #f5f2e8;
+  padding: 3rem 2rem;
+}
+
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  font-size: 1rem;
+  border: 2px solid #9caf88;
+  border-radius: 8px;
+  font-family: "Lato", sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #145a32;
+  box-shadow: 0 0 0 3px rgba(20, 90, 50, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #9caf88;
+}
+
+.filters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #145a32;
+  margin-bottom: 0.5rem;
+}
+
+.filter-select {
+  padding: 0.75rem;
+  border: 2px solid #9caf88;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: #145a32;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+  border-color: #145a32;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #145a32;
+  box-shadow: 0 0 0 3px rgba(20, 90, 50, 0.1);
+}
+
+.results-info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #666666;
+  text-align: center;
+}
+
+/* Farms Section */
+.investors-farms-section {
+  flex: 1;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.farms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.farm-card {
+  background-color: #ffffff;
+  border: 2px solid #9caf88;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.farm-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(20, 90, 50, 0.2);
+  border-color: #145a32;
+}
+
+.farm-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.farm-image {
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f2e8;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.farm-info {
+  flex: 1;
+}
+
+.farm-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #145a32;
+  margin: 0 0 0.25rem 0;
+  font-family: "Playfair Display", serif;
+}
+
+.farm-owner {
+  font-size: 0.95rem;
+  color: #666666;
+  margin: 0.25rem 0;
+}
+
+.farm-region {
+  font-size: 0.9rem;
+  color: #9caf88;
+  margin: 0.25rem 0 0 0;
+  font-weight: 500;
+}
+
+.farm-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f5f2e8;
+  border-radius: 8px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #666666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #145a32;
+}
+
+.soil-score-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.soil-score-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.farm-practices {
+  margin-bottom: 1.5rem;
+}
+
+.practices-label {
+  font-size: 0.9rem;
+  color: #145a32;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.practices-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.practice-tag {
+  background-color: #9caf88;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.farm-action-btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: #145a32;
+  color: #f5f2e8;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+.farm-action-btn:hover {
+  background-color: #0d3d24;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 90, 50, 0.3);
+}
+
+.farm-action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(20, 90, 50, 0.2);
+}
+
+.farm-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.farm-invest-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #9caf88;
+  color: #145a32;
+  border: 2px solid #145a32;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+.farm-invest-btn:hover {
+  background-color: #145a32;
+  color: #f5f2e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 90, 50, 0.3);
+}
+
+.farm-invest-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(20, 90, 50, 0.2);
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .farms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .investors-container {
+    margin-top: 50px;
+  }
+
+  .investors-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .investors-hero-description {
+    font-size: 1rem;
+  }
+
+  .search-container {
+    padding: 0;
+  }
+
+  .filters-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .farms-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .farm-header {
+    gap: 1rem;
+  }
+
+  .farm-name {
+    font-size: 1.2rem;
+  }
+
+  .farm-metrics {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .investors-search-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .investors-farms-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .investors-hero-title {
+    font-size: 2rem;
+  }
+
+  .search-input {
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .farm-card {
+    padding: 1.5rem;
+  }
+
+  .farm-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .farm-image {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .farm-name {
+    font-size: 1.1rem;
+  }
+
+  .farm-action-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .farm-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .farm-invest-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .farms-grid {
+    gap: 1rem;
+  }
+
+  .practices-tags {
+    gap: 0.4rem;
+  }
+
+  .practice-tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}

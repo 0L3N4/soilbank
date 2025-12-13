@@ -17,9 +17,9 @@ function Navbar() {
         <Link to="/" className="nav-link">
           Home
         </Link>
-        <a href="#investors" className="nav-link">
+        <Link to="/investors" className="nav-link">
           For Investors
-        </a>
+        </Link>
         <Link to="/farmers" className="nav-link">
           For Farmers
         </Link>
