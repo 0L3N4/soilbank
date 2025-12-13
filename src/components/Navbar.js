@@ -13,13 +13,13 @@ function Navbar() {
 
       {/* Navigation links in center */}
       <div className="navbar-links">
-        <a href="#home" className="nav-link">
+        <a href="/" className="nav-link">
           Home
         </a>
         <a href="#investors" className="nav-link">
           For Investors
         </a>
-        <a href="#farmers" className="nav-link">
+        <a href="/farmers" className="nav-link">
           For Farmers
         </a>
       </div>
