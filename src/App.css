@@ -1,5 +1,51 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 60px;
+}
+
+.hero-background {
+  background-image: url("./img/field.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 700px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #f5f2e8;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 4px 8px rgba(0, 0, 0, 0.3),
+    6px 6px 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  line-height: 1.2;
+  font-family: "Playfair Display", serif;
 }
 
 .App-logo {
@@ -34,5 +80,399 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* How SoilBank Works Section */
+.how-it-works {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #145a32;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f5f2e8;
+  border: 2px solid #9caf88;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(20, 90, 50, 0.15);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #145a32;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Statistics Section */
+.stats-section {
+  background-color: #145a32;
+  padding: 4rem 2rem;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f5f2e8;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-caption {
+  font-size: 1.1rem;
+  color: #f5f2e8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Stats */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-caption {
+    font-size: 0.95rem;
+  }
+
+  .stats-container {
+    gap: 2rem;
+  }
+}
+
+/* Process Section */
+.process-section {
+  background-color: #145a32;
+  padding: 4rem 2rem;
+}
+
+.process-section .section-title {
+  color: #f5f2e8;
+  margin-bottom: 1rem;
+}
+
+.process-section .section-description {
+  color: #f5f2e8;
+  margin-bottom: 3rem;
+}
+
+.process-columns {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.process-column {
+  flex: 1;
+  min-width: 350px;
+  background-color: rgba(245, 242, 232, 0.95);
+  padding: 2.5rem;
+  border-radius: 10px;
+  border-left: 5px solid #9caf88;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.process-column-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #145a32;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.process-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(20, 90, 50, 0.15);
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #145a32;
+  min-width: 60px;
+  text-align: center;
+  background-color: #9caf88;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #145a32;
+  margin: 0 0 0.5rem 0;
+  font-family: "Playfair Display", serif;
+}
+
+.step-description {
+  font-size: 0.95rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Process */
+@media (max-width: 768px) {
+  .process-columns {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .process-column {
+    min-width: 100%;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #145a32;
+  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  color: #145a32;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+.cta-button-farmers {
+  background-color: #145a32;
+  color: #f5f2e8;
+}
+
+.cta-button-farmers:hover {
+  background-color: #0d3d24;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(20, 90, 50, 0.3);
+}
+
+.cta-button-investors {
+  background-color: #f5f2e8;
+  color: #145a32;
+  border: 2px solid #145a32;
+}
+
+.cta-button-investors:hover {
+  background-color: #145a32;
+  color: #f5f2e8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(20, 90, 50, 0.3);
+}
+
+/* Responsive CTA */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #145a32;
+  color: #f5f2e8;
+  padding: 3rem 2rem 1rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 100px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f5f2e8;
+  margin: 0;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #9caf88;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.social-link {
+  color: #9caf88;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #f5f2e8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #9caf88;
+  font-size: 0.9rem;
+  color: #9caf88;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
   }
 }
