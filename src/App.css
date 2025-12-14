@@ -347,6 +347,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Lato", sans-serif;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .cta-button-farmers {

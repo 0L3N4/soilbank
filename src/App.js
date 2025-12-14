@@ -1,13 +1,15 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Farmers from "./pages/Farmers";
 import Investors from "./pages/Investors";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         <Routes>
@@ -182,12 +184,18 @@ function App() {
                       supports regenerative agriculture every step of the way.
                     </p>
                     <div className="cta-buttons">
-                      <button className="cta-button cta-button-farmers">
+                      <Link
+                        to="/farmers"
+                        className="cta-button cta-button-farmers"
+                      >
                         For Farmers
-                      </button>
-                      <button className="cta-button cta-button-investors">
+                      </Link>
+                      <Link
+                        to="/investors"
+                        className="cta-button cta-button-investors"
+                      >
                         For Investors
-                      </button>
+                      </Link>
                     </div>
                   </section>
                 </main>
