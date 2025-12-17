@@ -9,7 +9,7 @@ export const farmsData = [
     acres: 450,
     investment: "€45,000",
     practices: ["Cover Crops", "Minimal Tillage", "Composting"],
-    image: "🌾",
+    image: "🌱",
     description:
       "Sustainable farming in the heart of France with focus on soil regeneration",
     yearEstablished: 2015,
@@ -25,7 +25,7 @@ export const farmsData = [
     acres: 280,
     investment: "€38,000",
     practices: ["Reduced Tillage", "Mulching", "Crop Rotation"],
-    image: "�",
+    image: "",
     description:
       "German precision in regenerative agriculture with zero-waste approach",
     yearEstablished: 2018,
@@ -41,7 +41,7 @@ export const farmsData = [
     acres: 400,
     investment: "€48,000",
     practices: ["Native Plantings", "Soil Conservation", "Composting"],
-    image: "�",
+    image: "🌾",
     description:
       "Spanish prairie restoration with emphasis on soil health and biodiversity",
     yearEstablished: 2016,
@@ -73,7 +73,7 @@ export const farmsData = [
     acres: 350,
     investment: "€55,000",
     practices: ["Soil Testing", "Microorganism Cultivation", "Vermicomposting"],
-    image: "�",
+    image: "🌾",
     description:
       "Advanced soil biology research and regeneration in the Black Forest region",
     yearEstablished: 2014,
@@ -105,7 +105,7 @@ export const farmsData = [
     acres: 220,
     investment: "€39,500",
     practices: ["Compost Production", "Soil Amendment", "Organic Farming"],
-    image: "�",
+    image: "🌱",
     description:
       "Specialized compost production enhancing soil fertility throughout Loire Valley",
     yearEstablished: 2013,
@@ -121,7 +121,7 @@ export const farmsData = [
     acres: 410,
     investment: "€46,500",
     practices: ["Soil Mapping", "Microbial Enhancement", "Crop Rotation"],
-    image: "�",
+    image: "🌾",
     description:
       "Data-driven soil management combining traditional and modern regeneration techniques",
     yearEstablished: 2016,
@@ -137,7 +137,7 @@ export const farmsData = [
     acres: 520,
     investment: "€58,000",
     practices: ["Desert Soil Recovery", "Aquaponics", "Mulching"],
-    image: "�️",
+    image: "🌾",
     description:
       "Innovative techniques to restore arid Spanish soils for sustainable agriculture",
     yearEstablished: 2017,
@@ -153,7 +153,7 @@ export const farmsData = [
     acres: 290,
     investment: "€50,000",
     practices: ["Mineral Supplementation", "pH Balancing", "Soil Testing"],
-    image: "�",
+    image: "🌾",
     description:
       "Laboratory-grade soil optimization for premium crop production in Normandy",
     yearEstablished: 2014,
@@ -169,7 +169,7 @@ export const farmsData = [
     acres: 380,
     investment: "€51,000",
     practices: ["Soil Biota Restoration", "Cover Crops", "Composting"],
-    image: "�",
+    image: "🌱",
     description:
       "Comprehensive soil ecosystem restoration along the Rhine Valley",
     yearEstablished: 2015,
@@ -189,7 +189,7 @@ export const farmsData = [
       "Long-term Restoration",
       "Training",
     ],
-    image: "�️",
+    image: "🌾",
     description:
       "Building soil health foundations for sustainable agriculture across Castile",
     yearEstablished: 2012,
