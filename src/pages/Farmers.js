@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import { getFarms, saveFarms } from "../utils/farmsStorage";
 
 function Farmers() {
-  const [activeTab, setActiveTab] = useState("upload");
   const [uploadSuccess, setUploadSuccess] = useState(false);
 
   // Form state for Upload Soil Data tab
@@ -116,15 +115,45 @@ function Farmers() {
     { label: "Total Acres", value: "12,450" },
   ];
 
-  const tabs = [
-    {
-      id: "upload",
-      label: "Upload Soil Data",
-      title: "Upload Soil Data",
-      description:
-        "Share your soil test results to calculate your farm's health score",
-      content: (
-        <div className="tab-content">
+  return (
+    <div className="farmers-container">
+      {/* Hero Section */}
+      <section className="farmers-hero">
+        <div className="farmers-hero-content">
+          <h1 className="farmers-hero-title">Farmers Dashboard</h1>
+          <p className="farmers-hero-description">
+            Manage your soil regeneration projects, track improvements, and
+            connect with investors
+          </p>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="farmers-stats-section">
+        <h2 className="section-title">Farm Network Overview</h2>
+        <div className="farmers-stats-container">
+          {farmerStats.map((stat, index) => (
+            <div key={index} className="farmers-stat-item">
+              <div className="farmers-stat-number">{stat.value}</div>
+              <div className="farmers-stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Quick Actions Section - Main Registration Form */}
+      <section className="farmers-actions-section">
+        <h2 className="section-title">Register Your Farm</h2>
+
+        {/* Registration Form */}
+        <div className="registration-form-container">
+          {uploadSuccess && (
+            <div className="success-message">
+              ✅ Farm data saved successfully! Your farm has been added to the
+              network.
+            </div>
+          )}
+
           <div className="content-section">
             <h3>Upload Your Soil Test Results</h3>
             <p>
@@ -133,12 +162,6 @@ function Farmers() {
               nutrients, organic matter, pH levels, and microbial activity to
               generate your personalized Soil Health Score.
             </p>
-            {uploadSuccess && (
-              <div className="success-message">
-                ✅ Farm data saved successfully! Your farm has been added to the
-                network.
-              </div>
-            )}
             <div className="upload-form">
               <div className="form-group">
                 <label>Farm Name</label>
@@ -205,158 +228,9 @@ function Farmers() {
                 )}
               </div>
               <button className="form-submit-btn" onClick={handleUploadFarm}>
-                Upload and Analyze
+                Register Farm
               </button>
             </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      id: "project",
-      label: "Create a Project",
-      title: "Create a Project",
-      description:
-        "Develop a regenerative agriculture plan and attract investors",
-      content: (
-        <div className="tab-content">
-          <div className="content-section">
-            <h3>Build Your Regenerative Agriculture Project</h3>
-            <p>
-              Create a comprehensive project proposal that outlines your
-              regenerative agriculture goals, implementation timeline, and
-              expected environmental and financial impact. This will help
-              attract the right investors for your farm.
-            </p>
-            <div className="upload-form">
-              <div className="form-group">
-                <label>Project Title</label>
-                <input
-                  type="text"
-                  placeholder="e.g., Soil Regeneration Initiative 2025"
-                />
-              </div>
-              <div className="form-group">
-                <label>Project Description</label>
-                <textarea
-                  rows="5"
-                  placeholder="Describe your regenerative practices..."
-                ></textarea>
-              </div>
-              <div className="form-group">
-                <label>Funding Target ($)</label>
-                <input type="number" placeholder="e.g., 50000" />
-              </div>
-              <div className="form-group">
-                <label>Implementation Timeline (months)</label>
-                <input type="number" placeholder="e.g., 12" />
-              </div>
-              <button className="form-submit-btn">Create Project</button>
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      id: "progress",
-      label: "Track Progress",
-      title: "Track Progress",
-      description:
-        "Monitor soil improvements and project performance over time",
-      content: (
-        <div className="tab-content">
-          <div className="content-section">
-            <h3>Monitor Your Farm's Progress</h3>
-            <p>
-              Track the success of your regenerative agriculture projects with
-              real-time analytics. Monitor soil health improvements, compare
-              your farm's performance against benchmarks, and share progress
-              updates with your investors.
-            </p>
-            <div className="progress-metrics">
-              <div className="metric-card">
-                <div className="metric-label">Current Soil Score</div>
-                <div className="metric-value">72/100</div>
-                <div className="metric-change positive">
-                  ↑ +5 points this quarter
-                </div>
-              </div>
-              <div className="metric-card">
-                <div className="metric-label">Project Completion</div>
-                <div className="metric-value">65%</div>
-                <div className="progress-bar-small">
-                  <div className="progress-fill" style={{ width: "65%" }}></div>
-                </div>
-              </div>
-              <div className="metric-card">
-                <div className="metric-label">Carbon Sequestered</div>
-                <div className="metric-value">2.5 tons</div>
-                <div className="metric-change positive">
-                  ↑ Increasing each month
-                </div>
-              </div>
-            </div>
-            <button className="form-submit-btn">View Detailed Analytics</button>
-          </div>
-        </div>
-      ),
-    },
-  ];
-
-  return (
-    <div className="farmers-container">
-      {/* Hero Section */}
-      <section className="farmers-hero">
-        <div className="farmers-hero-content">
-          <h1 className="farmers-hero-title">Farmers Dashboard</h1>
-          <p className="farmers-hero-description">
-            Manage your soil regeneration projects, track improvements, and
-            connect with investors
-          </p>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="farmers-stats-section">
-        <h2 className="section-title">Farm Network Overview</h2>
-        <div className="farmers-stats-container">
-          {farmerStats.map((stat, index) => (
-            <div key={index} className="farmers-stat-item">
-              <div className="farmers-stat-number">{stat.value}</div>
-              <div className="farmers-stat-label">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Quick Actions Section - Tabbed Interface */}
-      <section className="farmers-actions-section">
-        <h2 className="section-title">Get Started</h2>
-
-        {/* Tab Navigation */}
-        <div className="tabs-container">
-          <div className="tabs-navigation">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="tabs-content">
-            {tabs.map((tab) => (
-              <div
-                key={tab.id}
-                className={`tab-pane ${activeTab === tab.id ? "active" : ""}`}
-              >
-                {tab.content}
-              </div>
-            ))}
           </div>
         </div>
       </section>
