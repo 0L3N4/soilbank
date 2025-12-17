@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/soilbank/static/css/main.ef30664e.css",
-    "main.js": "/soilbank/static/js/main.1cdb2985.js",
+    "main.css": "/soilbank/static/css/main.45144139.css",
+    "main.js": "/soilbank/static/js/main.b1cbc574.js",
     "static/js/453.fbe10665.chunk.js": "/soilbank/static/js/453.fbe10665.chunk.js",
     "static/media/field.jpg": "/soilbank/static/media/field.485e1ef2993c43572153.jpg",
     "static/media/logo.png": "/soilbank/static/media/logo.9b09167ab197b030f622.png",
     "index.html": "/soilbank/index.html",
-    "main.ef30664e.css.map": "/soilbank/static/css/main.ef30664e.css.map",
-    "main.1cdb2985.js.map": "/soilbank/static/js/main.1cdb2985.js.map",
+    "main.45144139.css.map": "/soilbank/static/css/main.45144139.css.map",
+    "main.b1cbc574.js.map": "/soilbank/static/js/main.b1cbc574.js.map",
     "453.fbe10665.chunk.js.map": "/soilbank/static/js/453.fbe10665.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef30664e.css",
-    "static/js/main.1cdb2985.js"
+    "static/css/main.45144139.css",
+    "static/js/main.b1cbc574.js"
   ]
 }
