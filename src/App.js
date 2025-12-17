@@ -5,8 +5,15 @@ import ScrollToTop from "./components/ScrollToTop";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Farmers from "./pages/Farmers";
 import Investors from "./pages/Investors";
+import { useEffect } from "react";
+import { initializeFarms } from "./utils/farmsStorage";
 
 function App() {
+  // Initialize farms in localStorage on app load
+  useEffect(() => {
+    initializeFarms();
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
