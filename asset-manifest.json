@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/soilbank/static/css/main.a1be769c.css",
-    "main.js": "/soilbank/static/js/main.d1b871ed.js",
+    "main.css": "/soilbank/static/css/main.3b4ae3db.css",
+    "main.js": "/soilbank/static/js/main.132603f6.js",
     "static/js/453.fbe10665.chunk.js": "/soilbank/static/js/453.fbe10665.chunk.js",
     "static/media/field.jpg": "/soilbank/static/media/field.485e1ef2993c43572153.jpg",
     "static/media/logo.png": "/soilbank/static/media/logo.9b09167ab197b030f622.png",
     "index.html": "/soilbank/index.html",
-    "main.a1be769c.css.map": "/soilbank/static/css/main.a1be769c.css.map",
-    "main.d1b871ed.js.map": "/soilbank/static/js/main.d1b871ed.js.map",
+    "main.3b4ae3db.css.map": "/soilbank/static/css/main.3b4ae3db.css.map",
+    "main.132603f6.js.map": "/soilbank/static/js/main.132603f6.js.map",
     "453.fbe10665.chunk.js.map": "/soilbank/static/js/453.fbe10665.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1be769c.css",
-    "static/js/main.d1b871ed.js"
+    "static/css/main.3b4ae3db.css",
+    "static/js/main.132603f6.js"
   ]
 }
